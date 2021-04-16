@@ -1,0 +1,18 @@
+// .eslintrc.jsM
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+    browser: true,
+  },
+  extends: ['eslint:recommended'],
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+}
+
+// "lint": "eslint --fix examples  packages ",

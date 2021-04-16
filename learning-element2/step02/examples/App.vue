@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import JSX from "./JSX.vue";
+import JSX from './JSX.vue'
 export default {
-  name: "App",
+  name: 'App',
   components: { JSX },
-};
+}
 </script>
 
 <style>

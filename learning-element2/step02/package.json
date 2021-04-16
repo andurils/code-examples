@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --write .",
+    "clean": "rimraf node_modules",
     "build:dist": "cross-env NODE_ENV=development webpack --config  build/webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js"
   },
@@ -25,6 +27,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
+    "prettier": "2.2.1",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "vue": "^2.6.12",
