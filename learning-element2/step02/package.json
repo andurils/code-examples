@@ -28,6 +28,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
+    "eslint-webpack-plugin": "^2.5.3",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",

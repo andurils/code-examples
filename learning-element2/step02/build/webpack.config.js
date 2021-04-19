@@ -1,6 +1,7 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -9,7 +10,14 @@ module.exports = {
     path: path.resolve(process.cwd(), 'dist'),
     filename: 'bundle.js',
   },
+  resolve: {
+    // 引入模块时不带扩展
+    extensions: ['.js', '.vue', '.json'],
+    // 解析模块时应该搜索的目录
+    modules: ['node_modules'],
+  },
   devServer: {
+    hot: true,
     contentBase: './dist',
   },
   module: {
@@ -49,6 +57,10 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new ESLintPlugin({
+      fix: true, // 自动修复
+      extensions: ['js', 'vue'],
+    }),
     new HtmlWebpackPlugin({
       title: 'Development',
       favicon: './public/favicon.ico',
