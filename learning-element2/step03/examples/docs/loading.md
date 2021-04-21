@@ -2,8 +2,22 @@
 
 加载数据时显示动效。
 
-<me-loading loading-text="页面加载中……"></me-loading>
+:::demo Loading 的基础用法。
 
 ```html
-<me-loading loading-text="页面加载中……"></me-loading>
+<template>
+  <me-loading :loading-text="text"></me-loading>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        text: "页面加载中……"
+      };
+    }
+  };
+</script>
 ```
+
+:::

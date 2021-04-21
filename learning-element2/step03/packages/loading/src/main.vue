@@ -41,6 +41,7 @@ export default {
 }
 
 .loading-text {
+  text-align: center;
   color: #409eff;
   margin-top: 50px;
   font-size: 18px;

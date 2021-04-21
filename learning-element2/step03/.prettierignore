@@ -1,6 +1,5 @@
-# Ignore artifacts:
-# build
-coverage
+*.md
 
-# Ignore all files:
-# *.html
+node_modules
+coverage
+lib
