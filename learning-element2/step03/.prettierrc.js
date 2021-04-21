@@ -1,5 +1,5 @@
 module.exports = {
-  semi: false, // 是否在语句末尾打印分号
+  semi: true, // 是否在语句末尾打印分号
   singleQuote: true, // 使用单引号
   trailingComma: 'all', // 尽可能使用尾随逗号（包括函数参数）
   bracketSpacing: true, // 是否在对象属性添加空格，这里选择是 { foo: bar }

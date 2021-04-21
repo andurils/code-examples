@@ -2,15 +2,15 @@
 export default {
   name: 'JSX',
   data() {
-    return {}
+    return {};
   },
   render() {
     return (
       <div>
-        <h1>Bebal Init</h1>
-        <h2>hello, I am JSX!!</h2>
+        <h3>Bebal Init</h3>
+        <p>hello, I am JSX!!</p>
       </div>
-    )
+    );
   },
-}
+};
 </script>

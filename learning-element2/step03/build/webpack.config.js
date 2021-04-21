@@ -1,8 +1,9 @@
-const path = require('path')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
+const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
+const config = require('./config');
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: './examples/main.js',
@@ -13,10 +14,13 @@ module.exports = {
   resolve: {
     // 引入模块时不带扩展
     extensions: ['.js', '.vue', '.json'],
+    // 创建 import 或 require 的别名，来确保模块引入变得更简单
+    alias: config.alias,
     // 解析模块时应该搜索的目录
     modules: ['node_modules'],
   },
   devServer: {
+    port: 8085,
     hot: true,
     contentBase: './dist',
   },
@@ -25,7 +29,7 @@ module.exports = {
       {
         test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
-        exclude: /node_modules/,
+        exclude: config.jsexclude,
         loader: 'babel-loader',
       },
       {
@@ -40,6 +44,22 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false,
+              },
+            },
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js'),
+          },
+        ],
       },
       {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
@@ -69,4 +89,4 @@ module.exports = {
       inject: true,
     }),
   ],
-}
+};
