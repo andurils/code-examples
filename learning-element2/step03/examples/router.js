@@ -26,6 +26,6 @@ routes.push({
 
 export default new VueRouter({
   mode: 'hash',
-  base: process.env.NODE_ENV !== 'production' ? '/' : '/me-ui',
+  base: __dirname,
   routes,
 });
