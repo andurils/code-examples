@@ -1,13 +1,20 @@
-# proj
+# me-vue-ui
 
-## Project setup
+> A Vue.js 2.x UI Toolkit for Web.
 
+ 
+## Install
+```shell
+npm install me-vue-ui -S
 ```
-npm install
+## Quick Start
+``` javascript
+import Vue from 'vue'
+import MeVue from 'me-vue-ui'
+
+Vue.use(MeVue)
+ 
 ```
 
-### Compiles and hot-reloads for development
-
-```
-npm run dev
-```
+## LICENSE
+[MIT](LICENSE)
