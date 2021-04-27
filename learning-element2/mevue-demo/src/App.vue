@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      text: "DEMO页面加载中……",
+      text: "demo页面加载中……",
     };
   },
 };
