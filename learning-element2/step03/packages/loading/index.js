@@ -7,4 +7,5 @@ Loading.install = function (Vue, options) {
   Vue.component(Loading.name, Loading); //使用component注册组件
 };
 
+// 默认导出组件
 export default Loading;
