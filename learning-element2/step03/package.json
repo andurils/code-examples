@@ -1,10 +1,14 @@
 {
   "name": "me-vue-ui",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A Vue.js 2.X UI Toolkit for Web",
   "main": "lib/me-vue-ui.common.js",
-  "keyword": "vue",
-  "private": false,
+  "keyword": [
+    "me-vue",
+    "vuejs",
+    "components",
+    "ui-kit"
+  ],
   "scripts": {
     "prettier": "prettier --write .",
     "clean": "rimraf node_modules",

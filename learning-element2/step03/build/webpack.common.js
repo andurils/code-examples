@@ -12,10 +12,11 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), './lib'), // 绝对路径
     publicPath: '/dist/', // 相对于服务(server-relative)
-    filename: 'mevue-ui.common.js',
+    filename: 'me-vue-ui.common.js',
     chunkFilename: '[id].js',
+    // libraryTarget: 'commonjs2',
     library: {
-      name: 'MEVUE', // 库的名称
+      // name: 'MEVUE', // 库的名称
       type: 'commonjs2', //配置将库暴露的方式
       export: 'default', // 指定哪一个导出应该被暴露为一个库
     },
@@ -59,29 +60,12 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.md$/,
-      //   use: [
-      //     {
-      //       loader: 'vue-loader',
-      //       options: {
-      //         compilerOptions: {
-      //           preserveWhitespace: false,
-      //         },
-      //       },
-      //     },
-      //     {
-      //       loader: path.resolve(__dirname, './md-loader/index.js'),
-      //     },
-      //   ],
-      // },
       {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
-          esModule: false, //“[object Module]”问题
-          // name: path.posix.join('static', '[name].[hash:7].[ext]'),
+          name: path.posix.join('static', '[name].[hash:7].[ext]'),
         },
       },
     ],
