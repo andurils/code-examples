@@ -1,0 +1,20 @@
+# 忽略目录
+build/
+dist/
+examples/
+packages/
+public/
+src/
+test/
+docs/
+
+
+# 忽略指定文件 
+.eslintignore
+.prettierignore        
+.eslintrc.js
+.prettierrc.js 
+babel.config.json 
+
+*.map
+
