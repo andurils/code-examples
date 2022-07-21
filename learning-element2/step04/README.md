@@ -1,10 +1,10 @@
 # 封装组件封装、编写说明文档
 
+![github-npm-twitter.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b7a4bf98167468490e223c8678ad5db~tplv-k3u1fbpfcp-watermark.image)
+
 > 原文地址： <https://juejin.cn/post/6953614014546968589>
 
 书接上文。项目第一个组件已经封装好，说明文档也已编写好。下面需要将说明文档发布到外网上，以此来展示和推广项目，使用 `Github Pages`功能实现。同时将组件发布之 `npm` 上，方便直接在项目中安装使用。  
-
-![github-npm-twitter.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b7a4bf98167468490e223c8678ad5db~tplv-k3u1fbpfcp-watermark.image)
 
 ## Github Pages发布
 
@@ -101,7 +101,7 @@ npm install -D  gh-pages
 > `gh-pages -d dist`等同于创建了一个`gh-pages`分支并将 `dist` 文件内容提交至该分支。  
 > 同理可以在`Git Repo` 创建任何分支现在,直接通过`配置`可以指定具体的分支/路径（可以使用 `master`、`gh-pages`之外的任何分支）。
 
-## 发布组件包
+## npm 发布组件包
 
 ### webpack配置
 
@@ -300,3 +300,9 @@ npm config set registry http://registry.npmjs.org
 发布成功后，进入组件包信息页面  <https://www.npmjs.com/package/me-vue-ui>, 可以看到上面的项目配置信息 。
 
 ![微信截图_20210427211808.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/728e8bcfa4f94109ab3fd4f033054469~tplv-k3u1fbpfcp-watermark.image)
+
+## References
+
+> [Github Pages 发布配置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+> [语义化版本 2.0.0](https://semver.org/lang/zh-CN/)  
+>[webpack配置](https://www.webpackjs.com/configuration/)
